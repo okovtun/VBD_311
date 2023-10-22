@@ -6,8 +6,6 @@ TODO:
 2. Используя программу AIDA-64 измерить производительность Кэша и памяти своего компьютера;
 3. https://www.ixbt.com/cpu/x86-cpu-faq-2006.shtml
    https://www.ixbt.com/cpu/cpu-digest-2009.shtml
-4. ark.intel.com
-	https://www.intel.com/content/www/us/en/processors/processor-numbers.html
 
 TODO:
 1. Выучить теорию!
