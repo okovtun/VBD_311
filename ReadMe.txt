@@ -1,6 +1,9 @@
 ﻿https://github.com/okovtun/VBD_311
 https://www.youtube.com/watch?v=-0offnnEWa0&list=PLeqyOOqxeiIODTb1UOPGYMkMS8eP-Pf-x
 
+TOREAD:
+http://www.softelectro.ru/ieee754.html
+
 TODO:
 1. Используя программы CPU-Z и AIDA-64 определить модель своего CPU, и его дополнительные наборы команд;
 2. Используя программу AIDA-64 измерить производительность Кэша и памяти своего компьютера;

@@ -1,12 +1,41 @@
 ﻿#include<iostream>
 using namespace std;
 
+//#define LOGICAL_TYPES
+#define NUMERIC_TYPES
+
 void main()
 {
 	setlocale(LC_ALL, "Russian");
+
+#if defined LOGICAL_TYPES
 	cout << "DataTypes" << endl;
 	cout << true << endl;
 	cout << false << endl;
+#endif
+
+#if defined NUMERIC_TYPES
+	cout << "int:\n";
+	cout << sizeof(int) << endl;
+	cout << INT_MIN << " ... " << INT_MAX << endl;
+	cout << "\n--------------------------------------\n";
+
+	cout << "long long:\n";
+	cout << sizeof(long long) << endl;
+	cout << "unsigned long long: " << 0 << " ... " << ULLONG_MAX << endl;
+	cout << "  signed long long: " << LLONG_MIN << " ... " << LLONG_MAX << endl;
+	cout << "\n--------------------------------------\n";
+
+	cout << "float:\n";
+	cout << sizeof(float) << endl;
+	cout << FLT_MIN << " ... " << FLT_MAX << endl;
+	cout << "\n--------------------------------------\n";
+
+	cout << "double:\n";
+	cout << sizeof(double) << endl;
+	cout << DBL_MIN << " ... " << DBL_MAX << endl;
+#endif
+
 }
 
 /*
