@@ -2,7 +2,7 @@
 using namespace std;
 
 //#define LOGICAL_TYPES
-#define NUMERIC_TYPES
+//#define NUMERIC_TYPES
 
 void main()
 {
@@ -36,6 +36,17 @@ void main()
 	cout << DBL_MIN << " ... " << DBL_MAX << endl;
 #endif
 
+	int a = 0;		//Инициализация при объявлении
+	cout << a << endl;
+	double price;	//Объявление переменной
+	price = 0;		//Инициализация после объявления
+	double price_of_coffee;
+	cout << "Введите стоимость кофе: "; 
+	cin >> price_of_coffee;	//Инициализация вводом с клавиатуры
+	int number_of_cups;
+	cout << "Введите количество чашек: "; cin >> number_of_cups;
+	double total_price = price_of_coffee * number_of_cups;
+	cout << "Общая стоимость покупки: " << total_price << endl;
 }
 
 /*
@@ -53,5 +64,21 @@ type - тип объявляемой переменной, он определя
 I	Логические типы: bool (Boolean) 1 Byte
 	true	- 1
 	false	- 0
+----------------------------------------------
+*/
+
+/*
+----------------------------------------------
+identifier - это имя.
+1. ABC...Zabc...z0123...9_;
+2. _1stPlace;
+3. Имена регистрозависимы;
+4. using namespace, int, for, if, while;
+----------------------------------------------
+*/
+
+/*
+----------------------------------------------
+Инициализация
 ----------------------------------------------
 */
