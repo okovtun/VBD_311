@@ -2,6 +2,18 @@
 https://www.youtube.com/watch?v=-0offnnEWa0&list=PLeqyOOqxeiIODTb1UOPGYMkMS8eP-Pf-x
 
 TODO:
+1. Написать программу "Калькулятор", которая принимает выражение вида:
+	2+3
+   и вычисляет результат этого выражения;
+2. Написать программу, в которую вводится целое число, и программа определяет,
+   является ли это число палиндромом.
+   Палиндром - это число, которое читается одинаково в обоих направлениях,
+   например:
+	12321
+	1221
+	121
+
+TODO:
 https://overclockers.ru/lab/show/96704/obzor-i-testirovanie-materinskoj-platy-evga-x299-dark
 https://www.amazon.co.uk/EVGA-X299-Intel-Motherboard-151-SX-E299-KR/dp/B079WCBP18?th=1
 https://ru.gecid.com/mboard/asus_tuf_gaming_z790-pro_wifi/
