@@ -1,6 +1,13 @@
 ﻿https://github.com/okovtun/VBD_311
 https://www.youtube.com/watch?v=-0offnnEWa0&list=PLeqyOOqxeiIODTb1UOPGYMkMS8eP-Pf-x
 
+TODO:
+https://overclockers.ru/lab/show/96704/obzor-i-testirovanie-materinskoj-platy-evga-x299-dark
+https://www.amazon.co.uk/EVGA-X299-Intel-Motherboard-151-SX-E299-KR/dp/B079WCBP18?th=1
+https://ru.gecid.com/mboard/asus_tuf_gaming_z790-pro_wifi/
+Поверхностный эффект (Skin Effect);
+Изучить шины PCI-Express и USB
+
 TOREAD:
 http://www.softelectro.ru/ieee754.html
 
