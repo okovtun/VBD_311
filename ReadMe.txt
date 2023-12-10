@@ -1,6 +1,17 @@
 ﻿https://github.com/okovtun/VBD_311
 https://www.youtube.com/watch?v=-0offnnEWa0&list=PLeqyOOqxeiIODTb1UOPGYMkMS8eP-Pf-x
 
+Cooling:
+1. https://www.youtube.com/watch?v=A8KJwdVKTok&pp=ygUw0Y3RgtC-0YIg0LrQvtC80L_RjNGO0YLQtdGAINC-0YXQu9Cw0LbQtNC10L3QuNC1;
+2. https://www.youtube.com/watch?v=AK3AyXErB1Y;
+3. https://www.youtube.com/watch?v=Tidws9NKS6c&t=542s&pp=ygUw0Y3RgtC-0YIg0LrQvtC80L_RjNGO0YLQtdGAINC-0YXQu9Cw0LbQtNC10L3QuNC1;
+4. https://www.youtube.com/watch?v=mALfZmxyOQ4&t=435s;
+5. https://www.youtube.com/watch?v=FirsCzTnbdQ&pp=ygULSUhTIEhhc3dlbGw%3D;
+6. https://www.youtube.com/watch?v=XXs0I5kuoX4&t=177s;
+
+PSU:
+https://ru.gecid.com/power/sovremennyee_bloki_pitaniya_atx_i_ih_harakteristiki/;
+
 TODO:
 1. В Solution 'ControlStructures' добавить проект 'Shooter', и в этом проекте реализовать программу,
    реагирующую на нажатие клавиш:
