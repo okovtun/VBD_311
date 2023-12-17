@@ -1,19 +1,28 @@
 ﻿#include<iostream>
 #include<conio.h>
 using namespace std;
+using std::cin;
+using std::cout;
+using std::endl;
 
 #define Escape 27
+#define tab "\t"
 
 //#define WHILE_1
 //#define WHILE_2
 //#define DO_WHILE
 //#define FACTORIAL
 //#define MULTIPLICATION_TABLE
-#define PYTHAGORAS_TABLE
+//#define PYTHAGORAS_TABLE
+//--------------------------------
+//#define POWER
+//#define ASCII
+//#define Fibonacci_1
 
 void main()
 {
 	setlocale(LC_ALL, "");
+
 #if defined WHILE_1
 	int i = 0;	//счетчик цикла
 	int n;		//количество итераций
@@ -49,7 +58,7 @@ void main()
 #ifdef FACTORIAL
 	int n;
 	cout << "Введите количество итераций: "; cin >> n;
-	int f = 1;
+	double f = 1;
 	for (int i = 1; i <= n; i++)
 	{
 		cout << i << "! = ";
@@ -83,7 +92,63 @@ void main()
 	}
 #endif // PYTHAGORAS_TABLE
 
+#ifdef POWER
+	double a;		//осноывние степени
+	int n;			//показатель степени
+	double N = 1;	//степень
+	cout << "Введите основание степени: "; cin >> a;
+	cout << "Введите показатель степени: "; cin >> n;
+	if (n < 0)
+	{
+		a = 1 / a;
+		n = -n;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		N *= a;
+	}
+	cout << N << endl;
+#endif // POWER
 
+#ifdef ASCII
+	cout << "Таблица ASCII-символов:\n";
+	setlocale(LC_ALL, "C");	//включаем кодировку по умолчанию
+	for (int i = 0; i < 256; i++)
+	{
+		if (i % 16 == 0)cout << endl;
+		cout << (char)i << " ";
+	}
+	cout << endl;
+	setlocale(LC_ALL, "");
+	cout << "Вот и сказочке конец." << endl;
+#endif // ASCII
+
+#ifdef Fibonacci_1
+	int n;
+	cout << "Введите предельное число: "; cin >> n;
+	for (long long int i = 0, a = 0, b = 1, c = a + b; i++ < n; a = b, b = c, c = a + b)
+		cout << a << "\t";
+	cout << endl;
+#endif // Fibonacci_1
+
+	int n;
+	cout << "Введите предельное число: "; cin >> n;
+	for (int i = 0; i <= n; i++)
+	{
+		bool simple = true;	//предположем что число 'i' простое,
+		//но это нужно проветрить:
+		for (int j = 2; j < sqrt(i); j++)//sqrt - Sqare Root (Квадратный корень)
+		{
+			if (i%j == 0)
+			{
+				simple = false;
+				break;	//ключевое слово 'break' прерывает текущую итерацию
+				//и все последующие.
+			}
+		}
+		if(simple)cout << i << tab;
+	}
+	cout << endl;
 }
 
 /*
