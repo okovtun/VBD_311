@@ -1,6 +1,12 @@
 ﻿https://github.com/okovtun/VBD_311
 https://www.youtube.com/watch?v=-0offnnEWa0&list=PLeqyOOqxeiIODTb1UOPGYMkMS8eP-Pf-x
 
+HDD:
+1. Почитать про RAID-массивы;
+2. https://www.youtube.com/watch?v=7onkTUts_-w&t=218s;
+3. https://www.youtube.com/watch?v=REeeBywe8_Y&t=140s;
+4. https://www.youtube.com/watch?v=QIhJkzlCuws;
+
 Cooling:
 1. https://www.youtube.com/watch?v=A8KJwdVKTok&pp=ygUw0Y3RgtC-0YIg0LrQvtC80L_RjNGO0YLQtdGAINC-0YXQu9Cw0LbQtNC10L3QuNC1;
 2. https://www.youtube.com/watch?v=AK3AyXErB1Y;
