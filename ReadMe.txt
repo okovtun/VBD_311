@@ -1,6 +1,15 @@
 ﻿https://github.com/okovtun/VBD_311
 https://www.youtube.com/watch?v=-0offnnEWa0&list=PLeqyOOqxeiIODTb1UOPGYMkMS8eP-Pf-x
 
+Images:
+https://drive.google.com/drive/folders/1bGrU2-z1rWnStI0XMWXCyV5wDYsnD1mv?usp=sharing
+https://drive.google.com/file/d/1fldruT1mC5kGLd7GWu2fU4QVFmd2WL2s/view?usp=drive_link BootFlash
+
+TODO:
+1. http://citforum.ru/operating_systems/linux/user/gl-02/gl_02_03.shtml;
+2. https://www.ntfs.com/ntfs-partition-boot-sector.htm;
+
+
 TODO:
 5 проектов на свое усмотрение залить на github.com.
 В журнал прислать ссылку на свой GitHub.
