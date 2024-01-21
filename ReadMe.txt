@@ -1,6 +1,10 @@
 ﻿https://github.com/okovtun/VBD_311
 https://www.youtube.com/watch?v=-0offnnEWa0&list=PLeqyOOqxeiIODTb1UOPGYMkMS8eP-Pf-x
 
+TODO:
+5 проектов на свое усмотрение залить на github.com.
+В журнал прислать ссылку на свой GitHub.
+
 HDD:
 1. Почитать про RAID-массивы;
 2. https://www.youtube.com/watch?v=7onkTUts_-w&t=218s;
@@ -43,6 +47,7 @@ TODO:
 	https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/Geometria1.txt
 4. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/ChessBoard.jpg
 5. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/HardChess.jpg
+5.1. Шахматную доску из пункта 5 сделать только двумя вложенными циклами;
 6. Вывести на экран треугольник Паскаля;
 
 
