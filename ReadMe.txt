@@ -1,6 +1,9 @@
 ﻿https://github.com/okovtun/VBD_311
 https://www.youtube.com/watch?v=-0offnnEWa0&list=PLeqyOOqxeiIODTb1UOPGYMkMS8eP-Pf-x
 
+TODO:
+1. Используя побитовые операции поменять местами две переменные без использования третьей;
+
 Images:
 https://drive.google.com/drive/folders/1bGrU2-z1rWnStI0XMWXCyV5wDYsnD1mv?usp=sharing
 https://drive.google.com/file/d/1fldruT1mC5kGLd7GWu2fU4QVFmd2WL2s/view?usp=drive_link BootFlash
