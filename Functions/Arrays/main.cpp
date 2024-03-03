@@ -12,24 +12,28 @@ void FillRand(int arr[], const int n, int minRand = 0, int maxRand = 100);
 void FillRand(double arr[], const int n, int minRand = 0, int maxRand = 100);
 void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
 
-void Print(const int arr[], const int n);
-void Print(const double arr[], const int n);
+template<typename T>void Print(const T arr[], const int n);
 void Print(const int arr[ROWS][COLS], const int ROWS, const int COLS);
+
+template<typename T>
+T Sum(const T arr[], const int n);
 
 void main()
 {
 	setlocale(LC_ALL, "");
-	const int n = 5;
-	int arr[n];
+	const int i_SIZE = 5;
+	int i_arr[i_SIZE];
 
-	FillRand(arr, n);
-	Print(arr, n);
+	FillRand(i_arr, i_SIZE);
+	Print(i_arr, i_SIZE);
+	cout << "Сумма элементов массива: " << Sum(i_arr, i_SIZE) << endl;
 	cout << delimiter << endl;
 
-	const int m = 8;
-	double brr[m];
-	FillRand(brr, m);
-	Print(brr, m);
+	const int d_SIZE = 8;
+	double d_arr[d_SIZE];
+	FillRand(d_arr, d_SIZE);
+	Print(d_arr, d_SIZE);
+	cout << "Сумма элементов массива: " << Sum(d_arr, d_SIZE) << endl;
 	cout << delimiter << endl;
 
 	int i_arr_2[ROWS][COLS];
@@ -70,16 +74,8 @@ void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS, int minRand, 
 	}
 }
 
-void Print(const int arr[], const int n)
-{
-	//Вывод массива на экран:
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << "\t";
-	}
-	cout << endl;
-}
-void Print(const double arr[], const int n)
+template<typename T>
+void Print(const T arr[], const int n)
 {
 	//Вывод массива на экран:
 	for (int i = 0; i < n; i++)
@@ -98,4 +94,12 @@ void Print(const int arr[ROWS][COLS], const int ROWS, const int COLS)
 		}
 		cout << endl;
 	}
+}
+
+template<typename T>
+T Sum(const T arr[], const int n)
+{
+	T sum = T();	//T() - значение по умолчанию для шаблонного типа данных.
+	for (int i = 0; i < n; i++)sum += arr[i];
+	return sum;
 }
