@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Functions", "Functions\Func
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arrays", "Arrays\Arrays.vcxproj", "{52D9D566-DC8E-492F-9711-078FEA444547}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArraysLibTest", "ArraysLibTest\ArraysLibTest.vcxproj", "{B9BC633A-2E1A-4B72-89DE-3872CBCAB196}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{52D9D566-DC8E-492F-9711-078FEA444547}.Release|x64.Build.0 = Release|x64
 		{52D9D566-DC8E-492F-9711-078FEA444547}.Release|x86.ActiveCfg = Release|Win32
 		{52D9D566-DC8E-492F-9711-078FEA444547}.Release|x86.Build.0 = Release|Win32
+		{B9BC633A-2E1A-4B72-89DE-3872CBCAB196}.Debug|x64.ActiveCfg = Debug|x64
+		{B9BC633A-2E1A-4B72-89DE-3872CBCAB196}.Debug|x64.Build.0 = Debug|x64
+		{B9BC633A-2E1A-4B72-89DE-3872CBCAB196}.Debug|x86.ActiveCfg = Debug|Win32
+		{B9BC633A-2E1A-4B72-89DE-3872CBCAB196}.Debug|x86.Build.0 = Debug|Win32
+		{B9BC633A-2E1A-4B72-89DE-3872CBCAB196}.Release|x64.ActiveCfg = Release|x64
+		{B9BC633A-2E1A-4B72-89DE-3872CBCAB196}.Release|x64.Build.0 = Release|x64
+		{B9BC633A-2E1A-4B72-89DE-3872CBCAB196}.Release|x86.ActiveCfg = Release|Win32
+		{B9BC633A-2E1A-4B72-89DE-3872CBCAB196}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

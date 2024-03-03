@@ -2,11 +2,6 @@
 https://www.youtube.com/watch?v=-0offnnEWa0&list=PLeqyOOqxeiIODTb1UOPGYMkMS8eP-Pf-x
 
 TODO:
-1. Что такое SID-номер?;
-2. Зайти в папку 'System Volume Information';
-3. Удалить все содержимое папки Windows\SoftwareDistribution, и закрыть туда доступ пользователю 'SYSTEM';
-
-TODO:
 1. В проекте 'Functions\Functions' написать функцию ??? Power(???), которая возводит число в степень;
 2. В проекте 'Functions\Arrays' написать следующие функции:
 	??? Sum(???);		//возвращает сумму элементов массива
@@ -18,6 +13,8 @@ TODO:
 	??? ShiftRight(???);//циклически сдвигает массив на заданное число элементов вправо
 3. Перегрузить все эти функции для типов данных 'char' и 'double';
 4. Перегрузить все эти функции для двумерных массивов типа 'int', 'double' и 'char';
+5. Вынести шаблонные функции в *.lib-файл:
+	https://docwiki.embarcadero.com/RADStudio/Sydney/en/Exporting_And_Importing_Templates
 
 DONE:
 0. Загрузить все ISO-образы в папку Images:
