@@ -25,6 +25,8 @@ TODO:
 	??? ShiftRight(???);//циклически сдвигает массив на заданное число элементов вправо
 3. Перегрузить все эти функции для типов данных 'char' и 'double';
 4. Перегрузить все эти функции для двумерных массивов типа 'int', 'double' и 'char';
+5. Вынести шаблонные функции в *.lib-файл:
+	https://docwiki.embarcadero.com/RADStudio/Sydney/en/Exporting_And_Importing_Templates
 
 DONE:
 0. Загрузить все ISO-образы в папку Images:
