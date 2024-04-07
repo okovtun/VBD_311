@@ -10,6 +10,10 @@ TOREAD:
 2. https://legacy.cplusplus.com/doc/tutorial/pointers/
 
 TODO:
+В проекте 'DynamicMemory' от ветки 'DynamicTemplates' созадть ветку 'DynamicOptimisation',
+и в этой ветке оптимизировать функции для работы с двумерными массивами.
+
+TODO:
 1. В Solution 'Pointers' добавить проект 'Split', и в этом проекте массив из 10 элементов,	DONE
    заполненный случайными числами разделить на два массива: 'even' и 'odd', в массив 'even'
    скопировать все четные элементы, а в массив 'odd' - все нечетные элементы.
