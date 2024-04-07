@@ -9,10 +9,8 @@ using std::endl;
 template<typename T>T** Allocate(const int rows, const int cols);
 template<typename T>void Clear(T** arr, const int rows);
 
-void FillRand(int arr[], const int n, int minRand = 0, int maxRand = 100);
-void FillRand(double arr[], const int n, int minRand = 0, int maxRand = 100);
-void FillRand(int** arr, const int rows, const int cols, int minRand = 0, int maxRand = 100);
-void FillRand(double** arr, const int rows, const int cols, int minRand = 0, int maxRand = 100);
+template<typename T>void FillRand(T arr[], const int n, int minRand = 0, int maxRand = 100);
+template<typename T>void FillRand(T** arr, const int rows, const int cols, int minRand = 0, int maxRand = 100);
 
 template<typename T>void Print(const T arr[], const int n);
 template<typename T>void Print(T** arr, const int rows, const int cols);
@@ -130,14 +128,7 @@ template<typename T>void Clear(T** arr, const int rows)
 	delete[] arr;
 }
 
-void FillRand(int arr[], const int n, int minRand, int maxRand)
-{
-	for (int i = 0; i < n; i++)
-	{
-		*(arr + i) = rand() % (maxRand - minRand) + minRand;	//обращение к элементам через арифметику указателей и оператор разыменования
-	}
-}
-void FillRand(double arr[], const int n, int minRand, int maxRand)
+template<typename T>void FillRand(T arr[], const int n, int minRand, int maxRand)
 {
 	if (minRand > maxRand)
 	{
@@ -145,26 +136,18 @@ void FillRand(double arr[], const int n, int minRand, int maxRand)
 		minRand = maxRand;
 		maxRand = buffer;
 	}
-	minRand *= 100;
-	maxRand *= 100;
+	if (typeid(arr) == typeid(double*) || typeid(arr) == typeid(float*))
+	{
+		minRand *= 100;
+		maxRand *= 100;
+	}
 	for (int i = 0; i < n; i++)
 	{
 		*(arr + i) = rand() % (maxRand - minRand) + minRand;	//обращение к элементам через арифметику указателей и оператор разыменования
-		arr[i] /= 100;
+		if (typeid(arr) == typeid(double*) || typeid(arr) == typeid(float*))arr[i] /= 100;
 	}
 }
-
-void FillRand(int** arr, const int rows, const int cols, int minRand, int maxRand)
-{
-	for (int i = 0; i < rows; i++)
-	{
-		for (int j = 0; j < cols; j++)
-		{
-			arr[i][j] = rand() % (maxRand - minRand) + minRand;
-		}
-	}
-}
-void FillRand(double** arr, const int rows, const int cols, int minRand, int maxRand)
+template<typename T>void FillRand(T** arr, const int rows, const int cols, int minRand, int maxRand)
 {
 	if (minRand > maxRand)
 	{
@@ -172,14 +155,18 @@ void FillRand(double** arr, const int rows, const int cols, int minRand, int max
 		minRand = maxRand;
 		maxRand = buffer;
 	}
-	minRand *= 100;
-	maxRand *= 100;
+	if (typeid(arr) == typeid(double**) || typeid(arr) == typeid(float**))
+	{
+		minRand *= 100;
+		maxRand *= 100;
+	}
 	for (int i = 0; i < rows; i++)
 	{
 		for (int j = 0; j < cols; j++)
 		{
 			arr[i][j] = rand() % (maxRand - minRand) + minRand;
-			arr[i][j] /= 100;
+			if (typeid(arr) == typeid(double**) || typeid(arr) == typeid(float**))
+				arr[i][j] /= 100;
 		}
 	}
 }
