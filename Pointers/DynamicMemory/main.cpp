@@ -6,7 +6,12 @@ using std::endl;
 
 #define tab "\t"
 
-void FillRand(int arr[], const int n);
+int** Allocate(const int rows, const int cols);
+void Clear(int** arr, const int rows);
+
+void FillRand(int arr[], const int n, int minRand = 0, int maxRand = 100);
+void FillRand(int** arr, const int rows, const int cols, int minRand = 0, int maxRand = 100);
+
 void Print(const int arr[], const int n);
 void Print(int** arr, const int rows, const int cols);
 
@@ -14,6 +19,12 @@ int* push_back(int arr[], int& n, const int value);
 int* push_front(int arr[], int& n, const int value);
 
 int* pop_back(int arr[], int& n);
+
+int** push_row_back(int** arr, int& rows, const int cols);
+int** pop_row_back(int** arr, int& rows, const int cols);
+
+void push_col_back(int** arr, const int rows, int& cols);
+void pop_col_back(int** arr, const int rows, int& cols);
 
 //#define DYNAMIC_MEMORY_1
 #define DYNAMIC_MEMORY_2
@@ -53,14 +64,41 @@ void main()
 	//Memory Leak  
 #endif // DYNAMIC_MEMORY_1
 
-	///////////////////////////////////////////////////////////////////////
-	///////		Объявление двумерного динамического массива			///////
-	///////////////////////////////////////////////////////////////////////
-
 	int rows;
 	int cols;
 	cout << "Введите количество строк: "; cin >> rows;
 	cout << "Введите количество элементов строки: "; cin >> cols;
+
+	int** arr = Allocate(rows, cols);
+
+	///////////////////////////////////////////////////////////////////////
+	///////		Использование двумерного динамического массива		///////
+	///////////////////////////////////////////////////////////////////////
+
+	FillRand(arr, rows, cols);
+	Print(arr, rows, cols);
+
+	arr = push_row_back(arr, rows, cols);
+	FillRand(arr[rows - 1], cols, 100, 1000);
+	Print(arr, rows, cols);
+	
+	arr = pop_row_back(arr, rows, cols);
+	Print(arr, rows, cols);
+
+	push_col_back(arr, rows, cols);
+	Print(arr, rows, cols);
+
+	pop_col_back(arr, rows, cols);
+	Print(arr, rows, cols);
+
+	Clear(arr, rows);
+}
+
+int** Allocate(const int rows, const int cols)
+{
+	///////////////////////////////////////////////////////////////////////
+	///////		Объявление двумерного динамического массива			///////
+	///////////////////////////////////////////////////////////////////////
 
 	//1) Создаем массив указателей:
 	int** arr = new int*[rows];
@@ -69,13 +107,10 @@ void main()
 	{
 		arr[i] = new int[cols] {};
 	}
-
-	///////////////////////////////////////////////////////////////////////
-	///////		Использование двумерного динамического массива		///////
-	///////////////////////////////////////////////////////////////////////
-	
-	Print(arr, rows, cols);
-
+	return arr;
+}
+void Clear(int** arr, const int rows)
+{
 	///////////////////////////////////////////////////////////////////////
 	///////		  Удаление двумерного динамического массива			///////
 	///////////////////////////////////////////////////////////////////////
@@ -89,13 +124,24 @@ void main()
 	delete[] arr;
 }
 
-void FillRand(int arr[], const int n)
+void FillRand(int arr[], const int n, int minRand, int maxRand)
 {
 	for (int i = 0; i < n; i++)
 	{
-		*(arr + i) = rand() % 100;	//обращение к элементам через арифметику указателей и оператор разыменования
+		*(arr + i) = rand() % (maxRand - minRand) + minRand;	//обращение к элементам через арифметику указателей и оператор разыменования
 	}
 }
+void FillRand(int** arr, const int rows, const int cols, int minRand, int maxRand)
+{
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < cols; j++)
+		{
+			arr[i][j] = rand() % (maxRand - minRand) + minRand;
+		}
+	}
+}
+
 void Print(const int arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
@@ -114,6 +160,7 @@ void Print(int** arr, const int rows, const int cols)
 		}
 		cout << endl;
 	}
+	cout << endl;
 }
 int* push_back(int arr[], int& n, int value)
 {
@@ -167,4 +214,46 @@ int* pop_back(int arr[], int& n)
 	for (int i = 0; i < n; i++)buffer[i] = arr[i];
 	delete[] arr;
 	return buffer;
+}
+
+int** push_row_back(int** arr, int& rows, const int cols)
+{
+	int** buffer = new int*[rows + 1];
+	for (int i = 0; i < rows; i++)buffer[i] = arr[i];
+	delete[] arr;
+	buffer[rows] = new int[cols] {};
+	rows++;
+	return buffer;
+}
+int** pop_row_back(int** arr, int& rows, const int cols)
+{
+	int** buffer = new int*[--rows];
+	delete[] arr[rows];	//удаляем из памяти последнюю строку двумерного массива
+	for (int i = 0; i < rows; i++)buffer[i] = arr[i];
+	delete[] arr;
+	return buffer;
+}
+
+void push_col_back(int** arr, const int rows, int& cols)
+{
+	for (int i = 0; i < rows; i++)
+	{
+		int* buffer = new int[cols + 1]{};
+		for (int j = 0; j < cols; j++)buffer[j] = arr[i][j];
+		delete[] arr[i];
+		arr[i] = buffer;
+	}
+	cols++;
+}
+
+void pop_col_back(int** arr, const int rows, int& cols)
+{
+	cols--;
+	for (int i = 0; i < rows; i++)
+	{
+		int* buffer = new int[cols] {};
+		for (int j = 0; j < cols; j++)buffer[j] = arr[i][j];
+		delete[] arr[i];
+		arr[i] = buffer;
+	}
 }
